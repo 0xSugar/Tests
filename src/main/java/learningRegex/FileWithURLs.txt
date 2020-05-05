@@ -1,0 +1,4 @@
+somesite.com/someway/orsomthelse/andwehere/index.html?utm_name=Dogma&utm_class=Siggr&winner=gaga&magic=3.18
+somesite.com/main.index?name=hora&list=hoho&age=182&fira=sil
+somesite.com/someway/orsomthelse/andwehere/index.html?hands=yes&mouth=no&alive=yes&magic=true
+somesite.com/someway/orsomthelse/andwehere/index.html?winner=20200&superold=youngboy&winter=nottoday&magic=3.18

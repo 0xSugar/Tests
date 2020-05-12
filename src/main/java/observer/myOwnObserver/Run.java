@@ -2,7 +2,7 @@ package observer.myOwnObserver;
 
 import java.io.*;
 
-public class Main {
+public class Run {
     public static void main(String[] args) throws IOException {
         EmailNewsletter emailNewsletter = new EmailNewsletter("Новости Мардильчика");
         emailNewsletter.addSubscribers(

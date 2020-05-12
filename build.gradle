@@ -5,12 +5,22 @@ plugins {
 group 'GroupId'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
+sourceCompatibility = 11
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    // auto
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'junit', name: 'junit', version: '4.12' // JUnit (for testing)
+    // Apache
+    compile group: 'commons-io', name: 'commons-io', version: '2.6'                 // Commons IO
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'      // Commons Lang
+    compile group: 'org.apache.commons', name: 'commons-math3', version: '3.6.1'    // Apache Math
+    compile group: 'log4j', name: 'log4j', version: '1.2.17'                        // Log4j (I have no idea what it is..)
+    compile group: 'commons-cli', name: 'commons-cli', version: '1.4'               // Commons CLI
+    //FastJson
+    compile group: 'com.alibaba', name: 'fastjson', version: '1.2.62'
 }

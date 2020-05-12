@@ -60,7 +60,7 @@ public class JoiningChangedLinesInTheFile {
             if (line1.equals(line2)) {
                 lines.add(new LineItem(Type.SAME, line1));
             } else {
-                if (line1.isEmpty() || line1.isBlank()) {
+                if (line1.isEmpty() || line2.isBlank()) {
                     lines.add(new LineItem(Type.ADDED, line2));
                 } else if (line2.isEmpty() || line2.isBlank()) {
                     lines.add(new LineItem(Type.REMOVED, line1));

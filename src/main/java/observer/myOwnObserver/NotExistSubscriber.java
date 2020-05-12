@@ -1,4 +1,4 @@
 package observer.myOwnObserver;
 
-public class NotExistSubscriver {
+public class NotExistSubscriber extends RuntimeException {
 }

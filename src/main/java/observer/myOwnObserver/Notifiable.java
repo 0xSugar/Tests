@@ -1,4 +1,5 @@
 package observer.myOwnObserver;
 
-public interface Notifable {
+public interface Notifiable {
+    void notifyMe(String newLetter, String title, String text);
 }

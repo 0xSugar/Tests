@@ -16,6 +16,7 @@ Option + Enter решает почти все проблемы
 Control + N создать сеттеры, геттеры или что угодно
 Control + O какой метод переписать
 Cmd Fn F12 покажет все методы, что есть в классе
+Cmd + Shift + '-'/'+' откроет или спрячет весь код в одну строчку
 
 
 String
@@ -94,6 +95,12 @@ Math
 .round();                   Округление к ближайшему целому
 #1: SplittableRandom random = new SplittableRandom();       |   int numb2 = random.nextInt(1, 7);   // делают то
 #2:         Random random = new Random();                   |   int numb3 = random.nextInt(7);      // же самое
+ВНИМАНИЕ.. про одинаковых условия, при генерации числ от 0 до 5000:
+        0.4c        random.nextInt(0,5001); - статический объект SplittableRandom random = new SplittableRandom();
+        1.1c        random.nextInt(5001); - созданный статический объект и ображение по ссылке Random -> random <- = new Random();
+        2.2c        Math.random() * 5001
+        6.5c        new Random().nextInt(5001);
+SplittableRandom лучше в любом из случаев
 
 StackTraceElement
 .getClassName();        //
@@ -685,6 +692,48 @@ R collect()	                Вычитывает все данные из пот
 
 
 
+*//**       ------------      ------------      A p a c h e    U t i l s      ------------      ------------      ------------      ------------                                                                         *//*
+Apache Commons IO
+    IOUtils             - работы с потоками ввода и вывода
+    IOCase              – Предоставляет метод для работы со строками и сравнения.
+    FileUtils           - операции с файлами (открытие, чтение, копирование и перемещение)
+    FilenameUtils       - независимый от операционной системы способ выполнения общих функций для имен файлов
+    FileSystemUtils     - проверка свободного места на данном томе или диске
+    Comparator          - пакет,
+            PathFileComparator -  может использоваться для сортировки списков или массивов файлов по их пути либо с учетом регистра,
+                без учета регистра или с учетом регистра
+            SizeFileComparator - используется для сравнения размеров (длин) двух файлов
+Apache Commons Lang
+    StringUtils         - безопасная работа со строками, даже если там null
+        isAllLowerCase - ergreg
+        isAllUpperCase - URGRE
+        isMixedCase    - neEF
+        isAlpha        - ergre Unicode characters
+        isAlphanumeric - v35t3
+    ArrayUtils
+        add(arr, "value")           - вернет массив с +1 элементом "value" в конце
+        add(arr, 0, "value")        - в указанный индекс
+        addAll(arr, "a", "b")       - сразу несколько значений в конец
+        remove(arr, 1)              - вернет массив без элемента под индеком 1
+        removeAll(arr, 1, 4)        - ну понятно...
+        removeElement(arr, element)
+        removeAllOccurences(arr, "v")    возвращает массив без всех v, т.е. удаляет все v
+        contains
+        reverse                     - да да, меняет местами
+        shift(arr, 10)              - смещает 10раз вперед все элементы
+        toString(arr, "YAHOO")      - выведет arr, если null - строку YAHOO
+        toMap(arr)                  - переводит в мапу двомерный массив, где по 1му элементу
+        isSameLength(arr1, ary2)    - проверяет длину массивов
+    NumberUtils
+        compare
+        createNumber        - создае число из строки
+        min && max          - работат с М А С С И В А М И!! -> int min = NumberUtils.min(arr);
+    Fraction        - правильно работает с дробями..
+    SystemUtils     - информация про Java или ОП..
+        getJavaHome || getUserHome  - возврашает File тип с путем
+    ConstructorUtils        - рефлексия
+    FieldUtils              - рефлексивное чтение/запись, поля класса
+    MethodUtils
 
 
 */

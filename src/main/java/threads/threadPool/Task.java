@@ -1,9 +1,9 @@
 package threads.threadPool;
 
-public class WorkerThread implements Runnable {
+public class Task implements Runnable {
     private String command;
 
-    public WorkerThread(String command) {
+    public Task(String command) {
         this.command = command;
     }
 

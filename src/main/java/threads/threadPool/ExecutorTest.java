@@ -7,7 +7,7 @@ public class ExecutorTest {
     public static void main(String[] args) {
         ExecutorService executor = Executors.newFixedThreadPool(2);
         for (int i = 0; i < 10; i++) {
-            executor.execute(new WorkerThread("'some_command'"));
+            executor.execute(new Task("'some_command'"));
         }
 
         executor.shutdown();

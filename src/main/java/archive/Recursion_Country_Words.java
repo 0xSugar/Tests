@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Recursion_Country_Words {
     public static void main(String[] args) throws IOException {
-        String fileName = "src/com/company/archive/recursion_file.txt";
+        String fileName = "/Users/skul/IdeaProjects/Tests/src/main/java/archive/recursion_file.txt";
         BufferedReader rd = new BufferedReader(new FileReader(fileName));
         String[] arr = null;
         if (rd.ready()) arr = rd.readLine().split("\\s");
